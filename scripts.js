@@ -67,3 +67,8 @@ operationButtons.forEach(button => button.addEventListener('click', ()=>{
     calculator.chooseOperation(button.innerText)
     calculator.updateDisplay()
 }))
+
+equalsButton.addEventListener('click', button =>{
+    calculator.compute()
+    calculator.updateDisplay()
+})
