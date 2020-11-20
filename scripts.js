@@ -18,8 +18,9 @@ class Calculator{
     }
 
     appendNumber(number){
-        //click no. and add to screen
-        this.currentOperand = number
+        //click no. and add to screen not add more than one decimal:
+        if(number === '.' && this.currentOperand.includes('.')) return
+        this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
     chooseOperation(operation){
