@@ -3,12 +3,14 @@ class Calculator{
     constructor(previousOperandTextElement, currentOperandTextElement){
         this.previousOperandTextElement = previousOperandTextElement,
         this.currentOperandTextElement = currentOperandTextElement
+        this.clear()//to clear all inputs when calculator is loaded
     }
 
     clear(){
         //if cleared returned this:
         this.currentOperand = '',
-        this.previousOperand = ''
+        this.previousOperand = '',
+        this.operation = undefined;
     }
 
     delete(){
