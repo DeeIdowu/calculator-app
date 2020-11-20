@@ -37,6 +37,25 @@ class Calculator{
 
     compute(){
         //compute values and produce single value
+        let computation 
+        const prev = parseFloat(this.previousOperand)
+        const current = parseFloat(this.currentOperand)
+        //check if user doesnt click anything/equal
+        if(isNaN(prev) || isNaN(current)) return
+        switch(this.operation){
+            case '+': 
+                computation = prev + current
+                break
+            case '*':
+                computation = prev * current
+                break
+            case "-":
+                computation = prev - current
+                break
+            case "÷":
+                computation = prev ÷ current
+                break
+        }
     }
 
     updateDisplay(){
