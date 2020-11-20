@@ -10,7 +10,7 @@ class Calculator{
         //if cleared returned this:
         this.currentOperand = '',
         this.previousOperand = '',
-        this.operation = undefined;
+        this.operation = undefined
     }
 
     delete(){
@@ -19,6 +19,7 @@ class Calculator{
 
     appendNumber(number){
         //click no. and add to screen
+        this.currentOperand = number
     }
 
     chooseOperation(operation){
@@ -31,7 +32,7 @@ class Calculator{
     }
 
     updateDisplay(){
-
+        this.currentOperandTextElement.innerText = this.currentOperand
     }
 }
 
@@ -44,3 +45,10 @@ const previousOperandTextElement = document.querySelector('[data-previous-operan
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
 
 
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+
+//event listener for click of number buttons:
+numberButtons.forEach(button => button.addEventListener('click', ()=>{
+    calculator.appendNumber(button.innerText)
+    calculator.updateDisplay()
+}))
