@@ -1,4 +1,4 @@
-//How to store the numbers clicked:
+//How to store the numbers clicked via previous and current operands:
 class Calculator{
     constructor(previousOperandTextElement, currentOperandTextElement){
         this.previousOperandTextElement = previousOperandTextElement,
@@ -6,7 +6,9 @@ class Calculator{
     }
 
     clear(){
-
+        //if cleared returned this:
+        this.currentOperand = '',
+        this.previousOperand = ''
     }
 
     delete(){
@@ -19,6 +21,14 @@ class Calculator{
 
     chooseOperation(operation){
         //selection of operation: +, *, / & -:
+
+    }
+
+    compute(){
+        //compute values and produce single value
+    }
+
+    updateDisplay(){
 
     }
 }
