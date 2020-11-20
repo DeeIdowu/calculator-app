@@ -25,6 +25,9 @@ class Calculator{
 
     chooseOperation(operation){
         //selection of operation: +, *, / & -:
+        this.operation = operation
+        this.previousOperand = this.currentOperand
+        this.currentOperand = '' // to clear and enter a new value
 
     }
 
@@ -34,6 +37,8 @@ class Calculator{
 
     updateDisplay(){
         this.currentOperandTextElement.innerText = this.currentOperand
+        this.previousOperandTextElement.innerText = this.previousOperand
+
     }
 }
 
